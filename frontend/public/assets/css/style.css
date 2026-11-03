@@ -1722,7 +1722,7 @@ ol {
 .contact {
   background: #100028;
   padding-top: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .contact__map {
