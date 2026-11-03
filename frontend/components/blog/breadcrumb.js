@@ -1,0 +1,27 @@
+
+import Link from "next/link";
+
+export default function Breadcrumb() {
+  return (
+    <div
+      className="breadcrumb-option spad set-bg"
+      data-setbg="/assets/img/breadcrumb-bg.jpg"
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <div className="breadcrumb__text">
+              <h2>Our Blog</h2>
+
+              <div className="breadcrumb__links">
+                <Link href="/">Home</Link>
+                <span>Blog</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
