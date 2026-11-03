@@ -6,18 +6,15 @@ export default function Breadcrumb() {
         className="breadcrumb-option spad"
         style={{
           backgroundImage: "url('/assets/img/breadcrumb-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
         }}
-      > 
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="breadcrumb__text">
                 <h2>About us</h2>
                 <div className="breadcrumb__links">
-                  <a href="/">Home</a>
+                  <a href="#">Home</a>
                   <span>About</span>
                 </div>
               </div>

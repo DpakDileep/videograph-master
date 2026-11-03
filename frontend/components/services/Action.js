@@ -1,4 +1,3 @@
-
 export default function Action() {
   return (
     <>
@@ -8,9 +7,6 @@ export default function Action() {
             className="callto__services spad"
             style={{
               backgroundImage: "url('/assets/img/calltos-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
             }}
           >
             <div className="row d-flex justify-content-center">
