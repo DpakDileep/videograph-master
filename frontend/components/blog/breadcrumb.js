@@ -1,11 +1,12 @@
-
 import Link from "next/link";
 
 export default function Breadcrumb() {
   return (
     <div
-      className="breadcrumb-option spad set-bg"
-      data-setbg="/assets/img/breadcrumb-bg.jpg"
+      className="breadcrumb-option spad"
+      style={{
+        backgroundImage: "url('/assets/img/breadcrumb-bg.jpg')",
+      }}
     >
       <div className="container">
         <div className="row">
@@ -17,7 +18,6 @@ export default function Breadcrumb() {
                 <Link href="/">Home</Link>
                 <span>Blog</span>
               </div>
-
             </div>
           </div>
         </div>
