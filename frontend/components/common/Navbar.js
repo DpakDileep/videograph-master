@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
             <div className="row">
                 <div className="col-lg-2">
                     <div className="header__logo">
-                        <a href="./index.html"><img src="/assets/img/logo.png" alt="" /></a>
+                        <Link href="/"><img src="/assets/img/logo.png" alt="" /></Link>
                     </div>
                 </div>
                 <div className="col-lg-10">
@@ -15,18 +16,11 @@ export default function Navbar() {
                         <nav className="header__nav__menu mobile-menu">
                             <ul>
                                 <li className="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./portfolio.html">Portfolio</a></li>
-                                <li><a href="./services.html">Services</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul className="dropdown">
-                                        <li><a href="./about.html">About</a></li>
-                                        <li><a href="./portfolio.html">Portfolio</a></li>
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><Link href="/about">About</Link></li>
+                                <li><Link href="/portfolio">Portfolio</Link></li>
+                                <li><Link href="/services">Services</Link></li>
+                                <li><Link href="/blog">Blog</Link></li>
+                                <li><Link href="/contact">Contact</Link></li>
                             </ul>
                         </nav>
                         <div className="header__nav__social">
