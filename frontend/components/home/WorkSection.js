@@ -1,6 +1,32 @@
-import React from "react";
+"use client";
+
+import { useEffect } from "react";
 
 export default function WorkSection() {
+  useEffect(() => {
+    const $ = window.jQuery;
+
+    if (!$ || !$.fn.masonry) return;
+
+    const gallery = $(".work__gallery");
+
+    if (gallery.length) {
+      gallery.masonry({
+        itemSelector: ".work__item",
+        columnWidth: ".grid-sizer",
+        gutter: 10,
+      });
+
+      gallery.masonry("layout");
+    }
+
+    return () => {
+      if (gallery.length && gallery.data("masonry")) {
+        gallery.masonry("destroy");
+      }
+    };
+  }, []);
+
   return (
     <section className="work">
       <div className="work__gallery">

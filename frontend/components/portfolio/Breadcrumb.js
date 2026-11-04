@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Breadcrumb() {
   return (
@@ -14,7 +15,7 @@ export default function Breadcrumb() {
               <div className="breadcrumb__text">
                 <h2>About us</h2>
                 <div className="breadcrumb__links">
-                  <a href="#">Home</a>
+                  <Link href="/">Home</Link>
                   <span>About</span>
                 </div>
               </div>

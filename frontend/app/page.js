@@ -1,4 +1,5 @@
 import Navbar from "@/components/common/Navbar"
+import Footer from "@/components/common/Footer"
 import HeroHome from "@/components/home/HeroHome"
 import ServiceHome from "@/components/home/ServiceHome"
 import WorkSection from "@/components/home/WorkSection"
@@ -18,6 +19,7 @@ export default function page() {
     <TeamSection />
     <LatestBlog />
     <CallToAction />
+    <Footer />
     </>
   )
 }
