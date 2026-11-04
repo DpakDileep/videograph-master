@@ -133,29 +133,29 @@
     /*------------------
         Logo Slider
     --------------------*/
-    $(".logo__carousel").owlCarousel({
-        loop: true,
-        margin: 100,
-        items: 6,
-        dots: false,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        responsive: {
-            992: {
-                items: 5
-            },
-            768: {
-                items: 4
-            },
-            480: {
-                items: 3
-            },
-            320: {
-                items: 2
-            }
-        }
-    });
+    // $(".logo__carousel").owlCarousel({
+    //     loop: true,
+    //     margin: 100,
+    //     items: 6,
+    //     dots: false,
+    //     smartSpeed: 1200,
+    //     autoHeight: false,
+    //     autoplay: true,
+    //     responsive: {
+    //         992: {
+    //             items: 5
+    //         },
+    //         768: {
+    //             items: 4
+    //         },
+    //         480: {
+    //             items: 3
+    //         },
+    //         320: {
+    //             items: 2
+    //         }
+    //     }
+    // });
 
     /*------------------
         Video Popup
