@@ -1,4 +1,5 @@
 import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 import AboutBreadcrumb from "@/components/about/AboutBreadcrumb";
 import AboutSection from "@/components/about/AboutSection";
 import TestimonialSection from "@/components/about/TestimonialSection";
@@ -14,6 +15,7 @@ export default function page() {
       <TestimonialSection />
       <CounterSection />
       <TeamSection />
+      <Footer />
     </>
   );
 }

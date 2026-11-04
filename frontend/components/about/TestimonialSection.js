@@ -1,6 +1,48 @@
-import React from "react";
+
+"use client";
+
+import React, { useEffect } from "react";
 
 export default function TestimonialSection() {
+  useEffect(() => {
+    const $ = window.jQuery;
+
+    if (!$ || !$.fn.owlCarousel) return;
+
+    const slider = $(".testimonial__slider");
+
+    if (slider.length && !slider.hasClass("owl-loaded")) {
+      slider.owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 3,
+        dots: true,
+        dotsEach: 2,
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+          992: {
+            items: 3,
+          },
+          768: {
+            items: 2,
+          },
+          320: {
+            items: 1,
+          },
+        },
+      });
+    }
+
+    // Destroy carousel when component unmounts
+    return () => {
+      if (slider.hasClass("owl-loaded")) {
+        slider.trigger("destroy.owl.carousel");
+      }
+    };
+  }, []);
+
   return (
     <section
       className="testimonial spad"
@@ -17,8 +59,10 @@ export default function TestimonialSection() {
             </div>
           </div>
         </div>
+
         <div className="row">
           <div className="testimonial__slider owl-carousel">
+
             <div className="col-lg-4">
               <div className="testimonial__item">
                 <div className="testimonial__text">
@@ -38,6 +82,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="testimonial__item">
                 <div className="testimonial__text">
@@ -57,6 +102,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="testimonial__item">
                 <div className="testimonial__text">
@@ -76,6 +122,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="testimonial__item">
                 <div className="testimonial__text">
@@ -95,6 +142,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="testimonial__item">
                 <div className="testimonial__text">
@@ -114,6 +162,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
