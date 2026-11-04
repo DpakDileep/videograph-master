@@ -14,7 +14,7 @@ export default function Breadcrumb() {
             <div className="breadcrumb__text">
               <h2>Contact us</h2>
               <div className="breadcrumb__links">
-                <a href="#">Home</a>
+                <Link href="/">Home</Link>
                 <span>Contact</span>
               </div>
             </div>

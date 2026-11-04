@@ -1,10 +1,29 @@
-
 "use client";
 
+import axios from "axios";
+
 export default function ContactForm() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Message submitted successfully!");
+
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      website: formData.get("website"),
+      message: formData.get("message"),
+    };
+
+    try {
+      await axios.post("http://127.0.0.1:8000/api/contact/", data);
+
+      alert("Message submitted successfully!");
+      e.target.reset();
+    } catch (error) {
+      console.error(error.response?.data || error);
+      alert("Failed to submit message.");
+    }
   };
 
   return (
@@ -31,31 +50,13 @@ export default function ContactForm() {
               <h3>Get in touch</h3>
 
               <form onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
+                <input type="text" name="name" placeholder="Name" required />
 
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
+                <input type="email" name="email" placeholder="Email" required />
 
-                <input
-                  type="text"
-                  name="website"
-                  placeholder="Website"
-                />
+                <input type="text" name="website" placeholder="Website" />
 
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  required
-                />
+                <textarea name="message" placeholder="Message" required />
 
                 <button type="submit" className="site-btn">
                   Send Message

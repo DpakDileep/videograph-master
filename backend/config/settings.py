@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'blog',
-   
-    ]
+    'contact',
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
