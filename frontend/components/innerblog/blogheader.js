@@ -1,4 +1,5 @@
-export default function BlogHeader() {
+
+export default function BlogHeader({ blog }) {
   return (
     <section
       className="blog-hero spad"
@@ -10,14 +11,29 @@ export default function BlogHeader() {
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8">
             <div className="blog__hero__text">
-              <h2>WHAT MAKES USERS WANT TO SHARE A VIDEO ON SOCIAL MEDIA?</h2>
+
+              <h2>{blog.heading}</h2>
+
               <ul>
                 <li>
-                  by <span>Krista Starkes</span>
+                  by <span>{blog.author || "Admin"}</span>
                 </li>
-                <li>Jan 03, 2020</li>
-                <li>05 Comment</li>
+
+                <li>
+                  {new Date(
+                    `${blog.published_date}T00:00:00`
+                  ).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "2-digit",
+                    year: "numeric",
+                  })}
+                </li>
+
+                <li>
+                  {String(blog.comments_count).padStart(2, "0")} Comment
+                </li>
               </ul>
+
             </div>
           </div>
         </div>

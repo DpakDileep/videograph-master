@@ -84,7 +84,7 @@ export default function BlogSection() {
 
         </div>
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-lg-12">
             <div className="pagination__option blog__pagi">
               <a href="#" className="arrow__pagination left__arrow">
@@ -97,7 +97,7 @@ export default function BlogSection() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
