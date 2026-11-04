@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'blog',
     'contact',
+    'testimonials',
 ]
 
 MIDDLEWARE = [
